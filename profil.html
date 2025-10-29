@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profil Saya</title>
+  <style>
+    /* Reset ringan */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg, #f7fbff, #ffffff);
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 760px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 8px 30px rgba(12, 20, 40, 0.08);
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: inline-block;
+      background: linear-gradient(135deg, #e6eefc, #f8f7ff);
+      border: 1px solid rgba(15,23,42,0.04);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .info h1 {
+      font-size: 20px;
+      margin-bottom: 6px;
+      letter-spacing: -0.2px;
+    }
+
+    .meta {
+      color: #475569;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .description {
+      color: #0f172a;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .actions {
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      border: 1px solid rgba(15,23,42,0.06);
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg,#3b82f6,#06b6d4);
+      color: white;
+      border: none;
+    }
+
+ 
+    @media (max-width: 560px) {
+      .card { grid-template-columns: 1fr; text-align: center; padding: 20px; }
+      .avatar { margin: 0 auto; }
+      .info { display: block; }
+      .actions { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <article class="card" aria-labelledby="nama">
+    <figure class="avatar" aria-hidden="false">
+      <!-- Ganti src ke 'profile.jpg' pada folder yang sama, atau ke URL gambar -->
+      <img src="profile.jpg" alt="Foto profil Nama Kamu">
+    </figure>
+
+    <div class="info">
+      <header>
+        <h1 id="nama">Nataneila Salvia S</h1>
+        <div class="meta">Telkom University D3 Sistem Informasi </div>
+      </header>
+
+      <p class="description">
+      <strong>Saya</strong>adalah mahasiswa D3 Sistem Informasi yang senang belajar dan 
+           bereksperimen dengan teknologi baru.
+      </p>
+
+      <div class="actions" role="group" aria-label="Tindakan profil">
+        <a class="btn btn-primary" href="#" onclick="alert('Tautan portofolio dibuka'); return false;">Lihat Portofolio</a>
+        <a class="btn" href="mailto:email@contoh.com">Hubungi</a>
+      </div>
+    </div>
+  </article>
+</body>
+</html>
